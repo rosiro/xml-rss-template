@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>[% site_title %]</title>
+    <description>[% site_description %]</description>
+    <link>[% site_url %]</link>
+    <language>[% site_language %]</language>
+    <copyright>[% site_copyright %]</copyright>
+    <pubDate>[% site_update_datetime  %]</pubDate>
+    <lastBuildDate>[% site_update_datetime %]</lastBuildDate>
+    <generator>[% rss_generator %]</generator>
+    <ttl>[% ttl %]</ttl>
+    [% IF atom %]<atom:link href="[% site_url %][% site_atom_feed_path %]" rel="self" type="application/rss+xml" />[% END %]
+    <image>
+      <title>[% site_title %]</title>
+      <url>[% site_image_url %]</url>
+      <link>[% site_url %]</link>
+      <description>[% site_description %]</description>
+    </image>
+    <item>
+      <title>[% item_title %]</title>
+      <description>[% item_description %]</description>
+      <link>[% item_url %]</link>
+      <guid isPermaLink="true">[% item_permalink %]</guid>
+      <pubDate>[% item_datetime %]</pubDate>
+      <source url="[% site_url %]">[% site_title %]</source>
+    </item>
+  </channel>
+</rss>
